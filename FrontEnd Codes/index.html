@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cubic Labs - Digital Products & Solutions</title>
+  <link rel="stylesheet" href="/style/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <div class="logo-icon">
+            <img class="logo" src="/images/Cubic Labs.png">
+          </div>
+          <span class="logo-text">
+            <span class="cubic">Cubic</span> <span class="labs">Labs</span>
+          </span>
+        </div>
+
+        <!-- Hamburger Menu Button -->
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link" data-en="HOME" data-ar="الرئيسية">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link" data-en="ABOUT" data-ar="من نحن">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a href="service.html" class="nav-link" data-en="SERVICES" data-ar="خدماتنا">SERVICES</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link" data-en="CONTACT" data-ar="اتصل بنا">CONTACT</a>
+          </li>
+          <li class="nav-item">
+            <a href="careers.html" class="nav-link" data-en="CAREERS" data-ar="الوظائف">CAREERS</a>
+          </li>
+           <li class="nav-item">
+            <a href="insight.html" class="nav-link" data-en="INSIGHTS" data-ar="الوظائف">INSIGHTS</a>
+          </li>
+        </ul>
+
+        <!-- Language Switcher Button -->
+        <div class="language-switcher">
+          <button id="lang-btn">AR</button>
+        </div>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-background">
+      <img src="/images/Hero Image.jpeg" alt="Modern Workspace" class="hero-bg-img">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title" data-en="We turn ideas into scalable digital products"
+        data-ar="نحوّل الأفكار إلى منتجات رقمية قابلة للتوسع">We turn ideas into scalable digital products</h1>
+      <p class="hero-description"
+        data-en="We craft visually stunning websites and applications that transform your digital presence from concept to deployment for your next building success."
+        data-ar="نصمم مواقع وتطبيقات مبهرة بصريًا تحوّل وجودك الرقمي من الفكرة إلى التطبيق لنجاح مشروعك القادم.">We
+        craft visually stunning websites and applications that transform your digital
+        presence from concept to deployment for your next building success.</p>
+
+      <div class="hero-buttons">
+        <a href="service.html" class="btn btn-primary" data-en="Explore Our Services" data-ar="استكشف خدماتنا">Explore
+          Our Services</a>
+        <a href="contact.html" class="btn btn-secondary" data-en="Get In Touch" data-ar="تواصل معنا">Get In Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Are Section -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <h2 class="section-title" data-en="Who We Are" data-ar="من نحن">Who We Are</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p data-en="At Cubic Labs, We Create Smart Digital Experiences By Combining Great Design, Reliable Technology And A Strong Focus On Your Client's."
+            data-ar="في مختبرات كيوبك، ننشئ تجارب رقمية ذكية من خلال الجمع بين التصميم الرائع والتكنولوجيا الموثوقة والتركيز القوي على عملائك.">
+            At Cubic Labs, We Create Smart Digital Experiences By Combining Great Design, Reliable Technology And A
+            Strong Focus On Your Client's.</p>
+          <p data-en="Our Team Of Designers And Developers Works Closely Together To Turn Your Ideas Into Websites, Apps, And Automated Systems That Truly Perform We Don't Just Build Products - We Build Connected Digital Solutions That Attract, Engage, And Deliver Results."
+            data-ar="يعمل فريق المصممين والمطورين لدينا بشكل وثيق لتحويل أفكارك إلى مواقع ويب وتطبيقات وأنظمة آلية تحقق النتائج فعلاً. نحن لا نكتفي ببناء المنتجات - بل نبني حلولاً رقمية متصلة تجذب وتشرك وتحقق النتائج.">
+            Our Team Of Designers And Developers Works Closely Together To Turn Your Ideas Into Websites, Apps, And
+            Automated Systems That Truly Perform We Don't Just Build Products - We Build Connected Digital Solutions
+            That Attract, Engage, And Deliver Results.</p>
+        </div>
+        <div class="about-image">
+          <img src="/images/who we are.jpeg" alt="Passion Led Us Here" class="about-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <h2 class="section-title" data-en="Our Services" data-ar="خدماتنا">Our Services</h2>
+      <p class="section-subtitle"
+        data-en="We combine creativity with cutting edge technology to deliver solutions that exceed expectations"
+        data-ar="نجمع بين الإبداع والتكنولوجيا المتطورة لتقديم حلول تتجاوز التوقعات">We combine creativity with cutting
+        edge technology to deliver solutions that exceed
+        expectations</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3 class="service-title" data-en="Web Development" data-ar="تطوير المواقع">Web Development</h3>
+          <p class="service-description"
+            data-en="Building modern, responsive websites and web applications with cutting-edge technologies."
+            data-ar="بناء مواقع ويب وتطبيقات حديثة ومتجاوبة باستخدام أحدث التقنيات.">Building modern, responsive
+            websites and web applications with cutting-edge
+            technologies.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-mobile"></i>
+          </div>
+          <h3 class="service-title" data-en="App Development" data-ar="العلامة التجارية الرقمية">App Development</h3>
+          <p class="service-description" data-en="We develop mobile apps that bring your ideas to life with innovative solutions,
+that captivate your users." data-ar="نطوّر تطبيقات موبايل تُحول أفكارك إلى واقع من خلال حلول مبتكرة،
+تجذب مستخدميك وتأسرهم.">We develop mobile apps that bring your ideas to life with innovative solutions, that captivate
+            your users.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-palette"></i>
+          </div>
+          <h3 class="service-title" data-en="Digital Branding" data-ar="العلامة التجارية الرقمية">Digital Branding</h3>
+          <p class="service-description"
+            data-en="Strategic branding that tells your story and creates memorable experiences."
+            data-ar="استراتيجية علامة تجارية تحكي قصتك وتخلق تجارب لا تُنسى.">Strategic branding that tells your story
+            and creates memorable experiences.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <h3 class="service-title" data-en="E-Commerce Solutions" data-ar="حلول التجارة الإلكترونية">E-Commerce
+            Solutions</h3>
+          <p class="service-description">End-to-end ecommerce platforms with secure payment integration.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3 class="service-title" data-en="Website Optimization" data-ar="تحسين المواقع">Website Optimization</h3>
+          <p class="service-description" data-en="Optimize your website's performance and search visibility."
+            data-ar="حسّن أداء موقعك ورؤيته في محركات البحث.">Optimize your website's performance and search visibility.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section">
+    <div class="container">
+      <div class="team-content">
+        <div class="team-image">
+          <img src="/images/why us.jpg" alt="Our Team" class="team-img">
+        </div>
+        <div class="team-text">
+
+          <div class="slider-text">
+            <div class="slide active">
+              <h2 data-en="Why Choose Cubics" data-ar="لماذا تختار كيوبكس">Why Choose Cubics</h2>
+              <p data-en="Cubic Labs is a team of eight innovators, engineers, and problem-solvers 
+                turning bold ideas into digital realities. We thrive on innovation, collaboration, 
+                and creating solutions that inspire."
+                data-ar="كيوبيك لابز هي فريق مكوّن من ثمانية مبتكرين ومهندسين ومحللي مشكلات، نحوّل الأفكار الجريئة إلى واقع رقمي.  نتميز بالابتكار، والتعاون، وابتكار حلول ملهمة.">
+                Cubic Labs is a team of eight innovators, engineers, and problem-solvers
+                turning bold ideas into digital realities. We thrive on innovation, collaboration,
+                and creating solutions that inspire.</p>
+            </div>
+            <div class="slide">
+              <h2 data-en="Why Choose Cubics" data-ar="لماذا تختار كيوبكس">Why Choose Cubics</h2>
+              <p data-en="We keep things clear and collaborative from day one. With open communication and regular check-ins, you're always in the loop. Early feedback ensures your vision is built just as imagined."
+                data-ar="نحرص على الوضوح والتعاون منذ اليوم الأول .من خلال التواصل المفتوح والمتابعة المنتظمة، تبقى على اطلاع دائم.والتغذية الراجعة المبكرة تضمن تنفيذ رؤيتك تمامًا كما تخيّلتها.">
+                We keep things clear and collaborative from day one.
+                With open communication and regular check-ins, you're always in the loop.
+                Early feedback ensures your vision is built just as imagined.</p>
+            </div>
+            <div class="slide">
+              <h2 data-en="Why Choose Cubics" data-ar="لماذا تختار كيوبكس">Why Choose Cubics</h2>
+              <p data-en="We keep communication open and collaborative from day one. Regular check-ins keep you updated on real-time progress. Your early feedback ensures the final product matches your vision."
+                data-ar="نحافظ على تواصل مفتوح وتعاون مستمر منذ اليوم الأول .المتابعة المنتظمة تُبقيك على اطلاع بتقدّم العمل في الوقت الفعلي. وملاحظاتك المبكرة تضمن أن المنتج النهائي يعكس رؤيتك بدقة.">
+                We keep communication open and collaborative from day one.
+                Regular check-ins keep you updated on real-time progress.
+                Your early feedback ensures the final product matches your vision.</p>
+            </div>
+            <div class="slide">
+              <h2 data-en="Why Choose Cubics" data-ar="لماذا تختار كيوبكس">Why Choose Cubics</h2>
+              <p data-en="Our success is directly tied to the outcomes we help you achieve — your wins are our wins. Whether it’s increasing customer engagement or accelerating product launches, we prioritize tangible impact."
+                data-ar="نجاحنا مرتبط مباشرةً بالنتائج التي نساعدك على تحقيقها — إنجازاتك هي إنجازاتنا. سواء كان ذلك من خلال زيادة تفاعل العملاء أو تسريع إطلاق المنتجات، فإننا نضع التأثير الملموس على رأس أولوياتنا.">
+                Our success is directly tied to the outcomes we help you achieve — your wins are our wins.
+                Whether it’s increasing customer engagement or accelerating product launches, we prioritize tangible
+                impact.</p>
+            </div>
+
+            <div class="dots">
+              <span class="dot active" data-slide="0"></span>
+              <span class="dot" data-slide="1"></span>
+              <span class="dot" data-slide="2"></span>
+              <span class="dot" data-slide="3"></span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+  <!-- Blog Section -->
+  <section class="blog-section" id="blog-section">
+    <div class="container">
+      <h2 class="section-title" data-en="Welcome To Cubic Blogs" data-ar="أهلاً بك في مدونة كيوبك">Welcome To Cubic
+        Blogs</h2>
+      <p class="section-subtitle"
+        data-en="Insights, ideas, and tech tips to help you build, scale, and grow smarter with Cubic Labs"
+        data-ar="رؤى وأفكار ونصائح تقنية لمساعدتك في البناء والتوسع والنمو بذكاء مع مختبرات كيوبك"> Insights, ideas, and
+        tech tips to help you build, scale, and grow smarter with Cubic Labs </p>
+      <div class="blog-carousel">
+        <div class="blog-container">
+          <!-- Card 1 -->
+          <div class="blog-card" data-blog-id="startup-branding">
+            <div class="blog-image"> <img src="/images/startup.webp" alt="Blog Post 1"> </div>
+            <div class="blog-content">
+              <h3 data-en="Why Your Startup Needs More than Just a Great Marketing"
+                data-ar="لماذا تحتاج شركتك الناشئة إلى أكثر من مجرد تسويق رائع">Why Your Startup Needs More than Just a
+                Great Marketing</h3>
+              <p data-en="When most startups think of branding, they think of a logo. Maybe a color palette. A catchy name. But branding is much more than just visuals — it's how people feel about your business, the trust you build, and the experience you deliver. In today's competitive landscape, startups can't afford to treat branding as an afterthought. Branding is your first and lasting impression. It's what makes you stand out and stay remembered."
+                data-ar="عندما تفكر معظم الشركات الناشئة في العلامة التجارية، فإنها تفكر في الشعار. ربما لوحة ألوان. اسم جذاب. لكن العلامة التجارية أكثر بكثير من مجرد مرئيات - إنها كيف يشعر الناس تجاه عملك، والثقة التي تبنيها، والتجربة التي تقدمها. في المشهد التنافسي اليوم، لا تستطيع الشركات الناشئة أن تعامل العلامة التجارية كفكرة لاحقة. العلامة التجارية هي انطباعك الأول والدائم. إنها ما يجعلك تبرز وتبقى في الذاكرة.">
+                When most startups think of branding, they think of a logo. Maybe a color palette. A catchy name. But
+                branding is much more than just visuals — it’s how people feel about your business, the trust you build,
+                and the experience you deliver. In today’s competitive landscape, startups can’t afford to treat
+                branding as an afterthought. Branding is your first and lasting impression. It’s what makes you stand
+                out and stay remembered. </p>
+            </div>
+          </div> <!-- Card 2 -->
+          <div class="blog-card" data-blog-id="automation-2025">
+            <div class="blog-image"> <img src="/images/automation.jpeg" alt="Blog Post 2"> </div>
+            <div class="blog-content">
+              <h3 data-en="Automation 2025: Work Smarter, Grow Faster" data-ar="الأتمتة 2025: اعمل بذكاء، انمُ بسرعة">
+                Automation 2025: Work Smarter, Grow Faster</h3>
+              <p data-en="In today's fast-moving digital landscape, automation isn't just a tech trend — it's a growth strategy that smart businesses are using to scale efficiently. For startups and small teams especially, automating repetitive tasks can save valuable time, reduce human error, and allow founders to focus on high-impact work. Automation handles routine tasks like support, onboarding, and marketing, keeping your team lean and efficient."
+                data-ar="في المشهد الرقمي سريع الحركة اليوم، الأتمتة ليست مجرد توجه تقني - إنها استراتيجية نمو تستخدمها الشركات الذكية للتوسع بكفاءة. للشركات الناشئة والفرق الصغيرة خاصة، يمكن لأتمتة المهام المتكررة أن توفر وقتًا ثمينًا، وتقلل الأخطاء البشرية، وتسمح للمؤسسين بالتركيز على العمل عالي التأثير. تتولى الأتمتة المهام الروتينية مثل الدعم والإعداد والتسويق، مما يحافظ على فريقك نحيفًا وفعالاً.">
+                In today’s fast-moving digital landscape, automation isn’t just a tech trend — it’s a growth strategy
+                that smart businesses are using to scale efficiently. For startups and small teams especially,
+                automating repetitive tasks can save valuable time, reduce human error, and allow founders to focus on
+                high-impact work. Automation handles routine tasks like support, onboarding, and marketing, keeping your
+                team lean and efficient.</p>
+            </div>
+          </div> <!-- Card 3 -->
+          <div class="blog-card" data-blog-id="web-vs-mobile">
+            <div class="blog-image"> <img src="/images/web mobile.jpeg" alt="Blog Post 3"> </div>
+            <div class="blog-content">
+              <h3 data-en="Web vs. Mobile App: Which Should You Develop First?"
+                data-ar="الويب مقابل تطبيق الجوال: أيهما يجب تطويره أولاً؟">Web vs. Mobile App: Which Should You Develop
+                First?</h3>
+              <p data-en="One of the first big questions startups face is whether to build a web app or a mobile app - and the right answer depends on your goal audience, and budget. A web app is typically faster and more cost-effective to develop, works across devices, and is easier to update — making it ideal for MVPs or broad reach. A mobile app delivers better performance and device access—perfect for engagement and offline use."
+                data-ar="أحد الأسئلة الكبيرة الأولى التي تواجهها الشركات الناشئة هو ما إذا كان يجب بناء تطبيق ويب أم تطبيق جوال - والجواب الصحيح يعتمد على جمهورك المستهدف وميزانيتك. عادة ما يكون تطبيق الويب أسرع وأكثر فعالية من حيث التكلفة للتطوير، ويعمل عبر الأجهزة، وأسهل للتحديث - مما يجعله مثاليًا للمنتجات الأولية أو الوصول الواسع. يوفر تطبيق الجوال أداءً أفضل ووصولاً للجهاز - مثالي للمشاركة والاستخدام بدون اتصال.">
+                One of the first big questions startups face is whether to build a web app or a mobile app - and the
+                right answer depends on your goal audience, and budget. A web app is typically faster and more
+                cost-effective to develop, works across devices, and is easier to update — making it ideal for MVPs or
+                broad reach. A mobile app delivers better performance and device access—perfect for engagement and
+                offline use.</p>
+            </div>
+          </div> <!-- Card 4 -->
+          <div class="blog-card" data-blog-id="ux-cost">
+            <div class="blog-image"> <img src="/images/UX.avif" alt="Blog Post 4"> </div>
+            <div class="blog-content">
+              <h3 data-en="The Real Cost of Skipping UX in Web Development"
+                data-ar="التكلفة الحقيقية لتجاهل تجربة المستخدم في تطوير الويب">The Real Cost of Skipping UX in Web
+                Development</h3>
+              <p data-en="Skipping UX in web development might save time or money upfront, but it often leads to higher costs down the road — in lost users, poor conversions, and expensive redesigns. A poorly designed user journey frustrates visitors, causing them to abandon your site before taking action, whether it's signing up, making a purchase, or contacting you. Without good UX, even the best-built product can fail to reach users."
+                data-ar="تجاهل تجربة المستخدم في تطوير الويب قد يوفر الوقت أو المال مقدمًا، لكنه غالبًا ما يؤدي إلى تكاليف أعلى لاحقًا - في فقدان المستخدمين، وضعف التحويلات، وإعادة التصميمات المكلفة. رحلة المستخدم سيئة التصميم تحبط الزوار، مما يجعلهم يتخلون عن موقعك قبل اتخاذ إجراء، سواء كان التسجيل أو الشراء أو الاتصال بك. بدون تجربة مستخدم جيدة، حتى أفضل منتج مبني يمكن أن يفشل في الوصول للمستخدمين.">
+                Skipping UX in web development might save time or money upfront, but it often leads to higher costs down
+                the road — in lost users, poor conversions, and expensive redesigns. A poorly designed user journey
+                frustrates visitors, causing them to abandon your site before taking action, whether it’s signing up,
+                making a purchase, or contacting you. Without good UX, even the best-built product can fail to reach
+                users.</p>
+            </div>
+          </div> <!-- Card 5 -->
+          <div class="blog-card" data-blog-id="scalable-app-6-weeks">
+            <div class="blog-image"> <img src="/images/WMA.avif" alt="Blog Post 5"> </div>
+            <div class="blog-content">
+              <h3 data-en="How We Built a Scalable App in 6 Weeks for a Startup"
+                data-ar="كيف بنينا تطبيقًا قابلاً للتوسع في 6 أسابيع لشركة ناشئة">How We Built a Scalable App in 6 Weeks
+                for a Startup</h3>
+              <p data-en="Building a scalable app in just six weeks is no small feat, but with focused teamwork and agile methods, it's achievable. We began by aligning closely with the startup's vision and user needs, prioritizing core features that delivered the most value. We used rapid prototyping and iterative development to build a flexible, scalable architecture. With clean code, strong security, and intuitive design, the app is reliable and easy to use."
+                data-ar="بناء تطبيق قابل للتوسع في ستة أسابيع فقط ليس بالأمر الهين، لكن مع العمل الجماعي المركز والطرق المرنة، إنه قابل للتحقيق. بدأنا بالتوافق الوثيق مع رؤية الشركة الناشئة واحتياجات المستخدم، مع إعطاء الأولوية للميزات الأساسية التي تقدم أكبر قيمة. استخدمنا النماذج الأولية السريعة والتطوير التكراري لبناء هندسة مرنة وقابلة للتوسع. مع الكود النظيف والأمان القوي والتصميم البديهي، التطبيق موثوق وسهل الاستخدام.">
+                Building a scalable app in just six weeks is no small feat, but with focused teamwork and agile methods,
+                it’s achievable. We began by aligning closely with the startup’s vision and user needs, prioritizing
+                core features that delivered the most value. We used rapid prototyping and iterative development to
+                build a flexible, scalable architecture. With clean code, strong security, and intuitive design, the app
+                is reliable and easy to use.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Arrows -->
+        <button class="carousel-btn carousel-prev" id="blog-prev">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="carousel-btn carousel-next" id="blog-next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-background">
+      <img src="/images/contact.webp" alt="Office Background" class="cta-bg-img">
+      <div class="cta-overlay"></div>
+    </div>
+    <div class="cta-content">
+      <h2 class="cta-title" data-en="We're Here To Turn Your Challenges Into Smart Solutions"
+        data-ar="نحن هنا لتحويل تحدياتك إلى حلول ذكية">We're Here To Turn Your Challenges Into Smart Solutions</h2>
+      <p class="cta-description" data-en="Reach out anytime - we'd love to hear from you"
+        data-ar="تواصل معنا في أي وقت - نحب أن نسمع منك">Reach out anytime - we'd love to hear from you</p>
+      <a href="contact.html" class="btn btn-primary" data-en="Build Your Project With Us Today"
+        data-ar="ابنِ مشروعك معنا اليوم">
+        Build Your Project With Us Today
+      </a>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <h2 class="section-title" data-en="FAQs" data-ar="الأسئلة الشائعة">FAQs</h2>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span data-en="What services does Cubic Labs offer?" data-ar="ما هي الخدمات التي تقدمها مختبرات كيوبك؟">What
+              services does Cubic Labs offer?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p data-en="We offer web development, app development, digital branding, e-commerce solutions, and website optimization services."
+              data-ar="نقدم تطوير المواقع، والعلامة التجارية الرقمية، وحلول التجارة الإلكترونية، وخدمات تحسين المواقع.">
+              We offer web development, app development, digital branding, e-commerce solutions, and website
+              optimization services.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span data-en="How long does it take to build a website or app?"
+              data-ar="كم من الوقت يستغرق بناء موقع ويب أو تطبيق؟">How long does it take to build a website or
+              app?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p data-en="Project timelines vary depending on complexity, but typically range from 4-12 weeks for most projects."
+              data-ar="تختلف الجداول الزمنية للمشاريع حسب التعقيد، ولكنها تتراوح عادة من 4-12 أسبوعًا لمعظم المشاريع.">
+              Project timelines vary depending on complexity, but typically range from 4-12 weeks for most projects.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span data-en="How do you ensure security in your development process?"
+              data-ar="كيف تضمنون الأمان في عملية التطوير؟">How do you ensure security in your development
+              process?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p data-en="We implement industry-standard security practices including SSL certificates, secure coding practices, and regular security audits."
+              data-ar="ننفذ ممارسات الأمان المعيارية في الصناعة بما في ذلك شهادات SSL وممارسات الترميز الآمنة والمراجعات الأمنية المنتظمة.">
+              We implement industry-standard security practices including SSL certificates, secure coding practices,
+              and regular security audits.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span data-en="What is your project onboarding process?" data-ar="ما هي عملية إعداد المشروع لديكم؟">What is
+              your project onboarding process?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p data-en="Our onboarding process includes discovery calls, requirement gathering, project planning, and setting up communication channels."
+              data-ar="تشمل عملية الإعداد لدينا مكالمات الاكتشاف وجمع المتطلبات وتخطيط المشروع وإعداد قنوات التواصل.">
+              Our onboarding process includes discovery calls, requirement gathering, project planning, and setting up
+              communication channels.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span data-en="Do you offer post-launch support or maintenance?"
+              data-ar="هل تقدمون الدعم أو الصيانة بعد الإطلاق؟">Do you offer post-launch support or maintenance?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p data-en="Yes, we provide ongoing support and maintenance packages to keep your website or application running smoothly."
+              data-ar="نعم، نقدم حزم الدعم والصيانة المستمرة للحفاظ على موقعك أو تطبيقك يعمل بسلاسة.">Yes, we provide
+              ongoing support and maintenance packages to keep your website or application running
+              smoothly.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span data-en="Can you work with startups or early-stage businesses?"
+              data-ar="هل يمكنكم العمل مع الشركات الناشئة أو الأعمال في المراحل المبكرة؟">Can you work with startups or
+              early-stage businesses?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p data-en="Absolutely! We love working with startups and can provide scalable solutions that grow with your business."
+              data-ar="بالطبع! نحب العمل مع الشركات الناشئة ويمكننا تقديم حلول قابلة للتوسع تنمو مع عملك.">Absolutely!
+              We love working with startups and can provide scalable solutions that grow with your
+              business.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <div class="footer-logo">
+            <div class="logo-icon">
+              <img class="logo" src="/images/Cubic Labs.png">
+            </div>
+            <span class="logo-text">
+              <span class="cubic-footer">Cubic</span> <span class="labs-footer">Labs</span>
+            </span>
+          </div>
+          <p class="footer-description" data-en="Kuwait City, Qibla, Salhiya Street, Luhaib(3), Office 213"
+            data-ar="مدينة الكويت، القبلة، شارع الصالحية، لحيب(3)، مكتب 213">Kuwait City, Qibla, Salhiya Street,
+            Luhaib(3), Office 213</p>
+          <div class="footer-contact">
+            <p>
+              <i class="fas fa-phone"></i>
+              <span class="phone-number" data-en="+965 41147331" data-ar="+٩٦٥ ٤١١٤٧٣٣١">+965 41147331</span>
+            </p>
+            <p><i class="fas fa-envelope"></i> info@cubiclabs.net</p>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-title" data-en="QUICK LINKS" data-ar="الروابط السريعة">QUICK LINKS</h3>
+          <ul class="footer-links">
+            <li><a href="about.html" data-en="About" data-ar="من نحن">About</a></li>
+            <li><a href="service.html" data-en="Services" data-ar="خدماتنا">Services</a></li>
+            <li><a href="contact.html" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
+            <li><a href="careers.html" data-en="Careers" data-ar="الوظائف">Careers</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-title" data-en="OUR SERVICES" data-ar="خدماتنا">OUR SERVICES</h3>
+          <ul class="footer-links">
+            <li><a href="service.html" data-en="Website Development" data-ar="تطوير المواقع">Website Development</a>
+            </li>
+            <li><a href="service.html" data-en="Digital Branding" data-ar="العلامة التجارية الرقمية">Digital
+                Branding</a></li>
+            <li><a href="service.html" data-en="E-Commerce Solutions" data-ar="حلول التجارة الإلكترونية">E-Commerce
+                Solutions</a>
+            </li>
+            <li><a href="service.html" data-en="Web Automation" data-ar="أتمتة الويب">Web Automation</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-title" data-en="RESOURCES" data-ar="الموارد">RESOURCES</h3>
+          <ul class="footer-links">
+            <li><a href="#" data-en="Blogs" data-ar="المدونات">Blogs</a></li>
+            <li><a href="insight.html" data-en="Insights" data-ar="الرؤى">Insights</a></li>
+            <li><a href="#" data-en="FAQ's" data-ar="الأسئلة الشائعة">FAQ's</a></li>
+            <li><a href="support.html" data-en="Support" data-ar="الدعم">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-title" data-en="SOCIAL MEDIA" data-ar="التواصل الاجتماعي">SOCIAL MEDIA</h3>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/company/cubic-labskw/" class="social-link" target="_blank"
+              aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/yourcompany" class="social-link" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/yourcompany" class="social-link" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.tiktok.com/login" class="social-link" target="_blank" aria-label="Tiktok">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-en="&copy; All Rights Are Reserved 2025 Cubic Labs"
+          data-ar="&copy; جميع الحقوق محفوظة 2025 مختبرات كيوبك">&copy; All Rights Are Reserved 2025 Cubic Labs</p>
+      </div>
+    </div>
+  </footer>
+  <script src="/javascript/script.js"></script>
+  <script src="/javascript/blogData.js"></script>
+  <script src="/javascript/main-blog.js"></script>
+  <script type="module" src="/javascript/blogpage.js"></script>
+</body>
+
+</html>

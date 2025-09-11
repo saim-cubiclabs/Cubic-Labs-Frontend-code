@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Carousel Section</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .team-section {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .team-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .team-image img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 0;
+            box-shadow: none;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        .team-img {
+            margin: 0 auto;
+        }
+
+        .slider-text {
+            flex: 1;
+            position: relative;
+            min-height: 200px;
+        }
+
+        .slide {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .slide.active {
+            display: block;
+            opacity: 1;
+            position: relative;
+        }
+
+        .slide h2 {
+            color: #f44336;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .slide p {
+            margin: 0;
+            line-height: 1.6;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        .dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+            gap: 0.5rem;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 12px;
+            width: 12px;
+            margin: 0 4px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot:hover {
+            background-color: #999;
+        }
+
+        .dot.active {
+            background: #f44336;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .team-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .team-image img {
+                width: 100%;
+                max-width: 350px;
+            }
+
+            .slide h2 {
+                font-size: 1.5rem;
+            }
+
+            .slider-text {
+                min-height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="team-section">
+        <div class="container">
+            <div class="team-content">
+                <div class="team-image">
+                    <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Our Team" class="team-img">
+                </div>
+                <div class="team-text">
+                    <div class="slider-text">
+                        <div class="slide active">
+                            <h2>Why Choose Cubics</h2>
+                            <p>Cubic Labs is a team of eight innovators, engineers, and problem-solvers turning bold ideas into digital realities. We thrive on innovation, collaboration, and creating solutions that inspire.</p>
+                        </div>
+                        <div class="slide">
+                            <h2>Why Choose Cubics</h2>
+                            <p>We keep things clear and collaborative from day one. With open communication and regular check-ins, you're always in the loop. Early feedback ensures your vision is built just as imagined.</p>
+                        </div>
+                        <div class="slide">
+                            <h2>Why Choose Cubics</h2>
+                            <p>We keep communication open and collaborative from day one. Regular check-ins keep you updated on real-time progress. Your early feedback ensures the final product matches your vision.</p>
+                        </div>
+                        <div class="slide">
+                            <h2>Why Choose Cubics</h2>
+                            <p>Our success is directly tied to the outcomes we help you achieve — your wins are our wins. Whether it's increasing customer engagement or accelerating product launches, we prioritize tangible impact.</p>
+                        </div>
+
+                        <div class="dots">
+                            <span class="dot active" data-slide="0"></span>
+                            <span class="dot" data-slide="1"></span>
+                            <span class="dot" data-slide="2"></span>
+                            <span class="dot" data-slide="3"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const slides = document.querySelectorAll(".slider-text .slide");
+            const dots = document.querySelectorAll(".slider-text .dot");
+            let currentIndex = 0;
+            const intervalTime = 4000;
+            let carouselInterval;
+
+            function showSlide(index) {
+                // Remove active class from all slides and dots
+                slides.forEach(slide => slide.classList.remove("active"));
+                dots.forEach(dot => dot.classList.remove("active"));
+                
+                // Add active class to current slide and dot
+                slides[index].classList.add("active");
+                dots[index].classList.add("active");
+                
+                currentIndex = index;
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % slides.length;
+                showSlide(currentIndex);
+            }
+
+            function startCarousel() {
+                carouselInterval = setInterval(nextSlide, intervalTime);
+            }
+
+            function stopCarousel() {
+                clearInterval(carouselInterval);
+            }
+
+            function restartCarousel() {
+                stopCarousel();
+                startCarousel();
+            }
+
+            // Initialize carousel
+            showSlide(0);
+            
+            // Start auto-play after a short delay to ensure everything is loaded
+            setTimeout(startCarousel, 100);
+
+            // Dot click navigation
+            dots.forEach((dot, index) => {
+                dot.addEventListener("click", function() {
+                    showSlide(index);
+                    restartCarousel();
+                });
+            });
+
+            // Pause on hover (optional)
+            const sliderContainer = document.querySelector(".slider-text");
+            sliderContainer.addEventListener("mouseenter", stopCarousel);
+            sliderContainer.addEventListener("mouseleave", startCarousel);
+        });
+    </script>
+</body>
+</html>
