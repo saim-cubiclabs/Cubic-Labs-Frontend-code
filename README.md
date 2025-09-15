@@ -17,7 +17,7 @@ Unauthorized use of our Content may result in legal action, including claims for
 
 For permissions or inquiries regarding usage, please contact:  
 **Email:** Info@cubiclabs.net  
-**Website:** [https://www.cubiclabs.com](https://www.cubiclabs.com)
+**Website:** [https://cubic-labs-736a9.web.app/)
 
 ---
 
