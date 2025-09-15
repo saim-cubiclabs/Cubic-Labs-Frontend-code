@@ -414,3 +414,22 @@ function subscribeNewsletter(email) {
 }
 
 
+// Hamburger Toggle
+
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    hamburger.classList.toggle("toggle"); // for animation
+});
+
+// Close menu on nav link click (optional)
+document.querySelectorAll(".nav-link").forEach(link => {
+    link.addEventListener("click", () => {
+        if (navMenu.classList.contains("active")) {
+            navMenu.classList.remove("active");
+            hamburger.classList.remove("toggle");
+        }
+    });
+});

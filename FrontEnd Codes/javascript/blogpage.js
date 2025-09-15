@@ -31,3 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".blog-container").innerHTML = "<p>Blog not found.</p>";
   }
 });
+
+
+
