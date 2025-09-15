@@ -4,19 +4,6 @@
   box-sizing: border-box;
 }
 
-html[dir="rtl"] .nav-menu {
-  direction: rtl;
-  text-align: right;
-}
-
-html[dir="rtl"] .nav-menu li {
-  float: right; /* or use flexbox reverse */
-}
-
-html[dir="rtl"] .hero-content {
-  text-align: right;
-}
-
 body {
   font-family: 'Oxanium', sans-serif;
   line-height: 1.6;
@@ -30,7 +17,27 @@ body {
   padding: 0 20px;
 }
 
-/* Header Styles */
+h1 {
+  margin-top: 60px;
+}
+
+/* RTL Support */
+html[dir="rtl"] .nav-menu {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .nav-menu li {
+  float: right;
+}
+
+html[dir="rtl"] .hero-content {
+  text-align: right;
+}
+
+/* ================================
+   Header & Navbar
+================================ */
 .header {
   position: fixed;
   top: 0;
@@ -56,6 +63,7 @@ body {
   align-items: center;
 }
 
+/* Logo */
 .nav-logo {
   display: flex;
   align-items: center;
@@ -70,9 +78,9 @@ body {
 }
 
 .logo-text {
-  font-family: 'Oxanium';
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
 }
 
 .logo-text .cubic {
@@ -83,12 +91,9 @@ body {
   font-weight: 400;
 }
 
-
-
+/* Language Switcher */
 .language-switcher {
-  position: fixed;
-  top: 20px;
-  right: 250px;
+  margin-left: 10px;
 }
 
 #lang-btn {
@@ -98,7 +103,6 @@ body {
   padding: 8px 16px;
   border-radius: 6px;
   cursor: pointer;
-  font-family: inherit;
   transition: 0.3s;
 }
 
@@ -106,27 +110,7 @@ body {
   background: #46a24a;
 }
 
-h1 {
-  margin-top: 60px;
-}
-
-
-@keyframes rotate {
-  0% {
-    transform: rotateX(0deg) rotateY(0deg);
-  }
-
-  100% {
-    transform: rotateX(360deg) rotateY(360deg);
-  }
-}
-
-.logo-text {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
-}
-
+/* Nav Links */
 .nav-menu {
   display: flex;
   list-style: none;
@@ -139,7 +123,7 @@ h1 {
   font-weight: 500;
   font-size: 0.9rem;
   position: relative;
-  transition: all 0.3s ease;
+  transition: 0.3s;
   padding: 0.5rem 0;
 }
 
@@ -155,24 +139,50 @@ h1 {
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(45deg, #4CAF50);
-  transition: width 0.3s ease;
+  background: #4CAF50;
+  transition: width 0.3s;
 }
 
 .nav-link:hover::after {
   width: 100%;
 }
 
-.flag-icon {
-  width: 24px;
-  height: 18px;
-  border-radius: 2px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* reduced from 1rem */
 }
 
-.flag-icon:hover {
-  transform: scale(1.1);
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
 }
 
 
@@ -644,78 +654,25 @@ h1 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Footer */
+/* ================================
+   Footer
+================================ */
 .footer {
   background: #333;
   color: white;
   padding: 60px 0 20px;
 }
 
-.logo-text .cubic-footer {
-  color: white;
-  font-weight: 600;
-}
-
-.logo-text .labs-footer {
-  color: white;
-  font-weight: 400;
-}
-
-
-
 .footer-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 3rem;
   margin-bottom: 3rem;
+}
+
+.logo-text .cubic-footer,
+.logo-text .labs-footer {
+  color: white !important;
 }
 
 .footer-logo {
@@ -753,7 +710,7 @@ h1 {
   left: 0;
   width: 40px;
   height: 2px;
-  background: linear-gradient(45deg, #4CAF50, #45a049);
+  background: #4CAF50;
 }
 
 .footer-links {
@@ -767,13 +724,11 @@ h1 {
 .footer-links a {
   color: #ccc;
   text-decoration: none;
-  transition: all 0.3s ease;
-  position: relative;
+  transition: 0.3s;
 }
 
 .footer-links a:hover {
-  color: #4CAF50;
-  padding-left: 10px;
+  color: white;
 }
 
 .social-links {
@@ -781,83 +736,168 @@ h1 {
   gap: 1rem;
 }
 
-.social-link {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(45deg, #4CAF50);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-decoration: none;
-  transition: all 0.3s ease;
+.social-links a {
+  color: #ccc;
+  font-size: 1.2rem;
+  transition: 0.3s;
 }
 
-.social-link:hover {
-  transform: translateY(-3px) rotate(360deg);
-  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+.social-links a:hover {
+  color: #4CAF50;
 }
 
 .footer-bottom {
-  border-top: 1px solid #555;
-  padding-top: 2rem;
   text-align: center;
-  color: #ccc;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #aaa;
+  font-size: 0.9rem;
 }
 
-/* Responsive Design */
+
+/* ================================
+   Mobile Responsiveness
+================================ */
+
+/* Hamburger visibility */
 @media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* Make hamburger visible */
+  }
+
   .nav-menu {
-    display: none;
-  }
-
-  .hero-title {
-    font-size: 2.5rem;
-  }
-
-  .hero-buttons {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    height: calc(100vh - 70px);
+    width: 250px;
+    background: white;
     flex-direction: column;
-    align-items: center;
+    padding: 2rem;
+    gap: 1.5rem;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+    z-index: 1000;
   }
 
-  .about-content,
-  .team-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .blog-card {
-    flex: 0 0 100%;
-  }
-
-  .faq-grid {
-    grid-template-columns: 1fr;
-  }  
-
-  .carousel-btn {
-    display: none;
+  .nav-menu.active {
+    right: 0;
   }
 }
 
-@media (max-width: 480px) {
+
+/* ==============================
+   Mobile Responsiveness Enhancements
+================================= */
+
+/* Mobile adjustments for screens ≤768px */
+@media (max-width: 768px) {
   .container {
     padding: 0 15px;
   }
 
+  /* Hero Section */
+  .hero {
+    height: 70vh;
+  }
   .hero-title {
     font-size: 2rem;
   }
-
   .hero-description {
     font-size: 1rem;
   }
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
 
+  /* Company Culture Section */
+  .culture-section {
+    padding: 50px 0;
+  }
   .section-title {
-    font-size: 2rem;
+    font-size: 28px;
+  }
+  .section-description {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+  .culture-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .culture-card {
+    padding: 30px 20px;
+  }
+
+  /* Jobs Section */
+  .jobs-section {
+    padding: 50px 0;
+  }
+  .job-listings {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .job-card {
+    padding: 20px;
+  }
+
+  /* Application Section */
+  .application-section {
+    padding: 50px 0;
+  }
+  .application-form {
+    padding: 30px 20px;
+  }
+}
+
+/* Extra small screens ≤480px */
+@media (max-width: 480px) {
+  .hero {
+    height: 60vh;
+  }
+  .hero-title {
+    font-size: 1.6rem;
+  }
+  .hero-description {
+    font-size: 0.9rem;
+  }
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+  .culture-card h3 {
+    font-size: 18px;
+  }
+  .culture-card p {
+    font-size: 13px;
+  }
+  .job-info h3 {
+    font-size: 18px;
+  }
+  .job-level,
+  .job-content p,
+  .job-content ul li {
+    font-size: 13px;
+  }
+  .apply-btn {
+    padding: 10px 25px;
+    font-size: 13px;
+  }
+  .application-form {
+    padding: 25px 15px;
+  }
+  .form-group input,
+  .form-group textarea {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+  .file-label {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+  .submit-btn {
+    padding: 14px 30px;
+    font-size: 14px;
   }
 }
