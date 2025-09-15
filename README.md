@@ -19,6 +19,4 @@ For permissions or inquiries regarding usage, please contact:
 **Email:** Info@cubiclabs.net  
 **Website:** [https://cubic-labs-736a9.web.app/)
 
----
 
-**Note:** This is a protective license specifically for your company's website content. It does **not** replace a full legal copyright registration. For maximum protection, consult a legal professional.
