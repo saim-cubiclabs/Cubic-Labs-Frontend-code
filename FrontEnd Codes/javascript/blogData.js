@@ -194,3 +194,4 @@ function getAllBlogPosts() {
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { blogPosts, getBlogPost, getAllBlogPosts };
 }
+
