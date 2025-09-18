@@ -984,7 +984,7 @@ html[dir="rtl"] .hero-content {
 }
 
 .pricing-card-dark {
-  background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
   color: white;
 }
 
@@ -1006,7 +1006,7 @@ html[dir="rtl"] .hero-content {
 }
 
 .pricing-card-dark .pricing-category {
-  color: #64b5f6;
+  color: #a5d6a7;
 }
 
 .pricing-amount {
@@ -1037,9 +1037,9 @@ html[dir="rtl"] .hero-content {
 }
 
 .exclusions-title {
-  color: #ff6b6b;
+  color: #000;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .pricing-features {
@@ -1062,7 +1062,7 @@ html[dir="rtl"] .hero-content {
 }
 
 .pricing-card-dark .feature-item i {
-  color: #64b5f6;
+  color: #a5d6a7;
 }
 
 .pricing-btn {
@@ -1090,14 +1090,14 @@ html[dir="rtl"] .hero-content {
 }
 
 .btn-dark {
-  background: linear-gradient(45deg, #64b5f6, #42a5f5);
+  background: linear-gradient(45deg, #66bb6a, #4caf50);
   color: white;
-  box-shadow: 0 4px 15px rgba(100, 181, 246, 0.3);
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
 }
 
 .btn-dark:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(100, 181, 246, 0.4);
+  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
 }
 
 /* Responsive Design for Pricing */
