@@ -621,25 +621,32 @@ html[dir="rtl"] .hero-content {
 
 /* Map Section Styling - Desktop First */
 .map-container {
+  width: 100%;
   max-width: 1400px;
-  margin: 60px auto;
+  margin: 60px auto 0 auto;
   padding: 0 40px;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  position: relative;
 }
 
 .map-container iframe {
   width: 100%;
   max-width: 1200px;
   height: 600px;
+  min-height: 400px;
   border: none;
   border-radius: 25px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
   transition: all 0.4s ease;
   display: block;
   margin: 0 auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .map-container iframe:hover {
@@ -736,19 +743,25 @@ html[dir="rtl"] .hero-content {
 
 @media (max-width: 768px) {
   .map-container {
+    width: 100%;
     padding: 0 15px;
-    margin: 30px auto;
+    margin: 30px auto 0 auto;
     max-width: 100%;
   }
   
   .map-container iframe {
+    width: 100%;
     max-width: 100%;
     height: 350px;
+    min-height: 300px;
     border-radius: 15px;
+    left: 50%;
+    transform: translateX(-50%);
   }
   
   .contact-section:last-of-type {
     padding: 80px 0;
+    width: 100%;
   }
   
   .contact-section:last-of-type h2 {
@@ -766,16 +779,23 @@ html[dir="rtl"] .hero-content {
 
 @media (max-width: 480px) {
   .map-container {
-    margin: 25px auto;
+    width: 100%;
+    margin: 25px auto 0 auto;
+    padding: 0 10px;
   }
   
   .map-container iframe {
+    width: 100%;
     height: 280px;
+    min-height: 250px;
     border-radius: 12px;
+    left: 50%;
+    transform: translateX(-50%);
   }
   
   .contact-section:last-of-type {
     padding: 60px 0;
+    width: 100%;
   }
   
   .contact-section:last-of-type h2 {
@@ -926,4 +946,70 @@ html[dir="rtl"] .hero-content {
     text-align: center;
     font-weight: bold;
   }
+}/* Enh
+anced Map Responsiveness and Pin Visibility */
+.map-container {
+  aspect-ratio: 16/9;
+  min-height: 300px;
+}
+
+.map-container iframe {
+  aspect-ratio: inherit;
+  object-fit: cover;
+}
+
+/* Map Loading State */
+.map-container::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #4CAF50;
+  border-radius: 50%;
+  animation: mapSpin 1s linear infinite;
+  z-index: -1;
+}
+
+@keyframes mapSpin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Hide loading spinner when map loads */
+.map-container iframe[src] + ::after {
+  display: none;
+}
+
+/* Ensure map container maintains aspect ratio */
+@media (max-width: 1200px) {
+  .map-container {
+    aspect-ratio: 4/3;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    aspect-ratio: 16/10;
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-container {
+    aspect-ratio: 1/1;
+    min-height: 200px;
+  }
+}
+
+/* Enhanced pin visibility styles */
+.map-container iframe {
+  filter: contrast(1.1) saturate(1.2);
+}
+
+.map-container iframe:hover {
+  filter: contrast(1.2) saturate(1.3);
 }
