@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Oxanium', sans-serif;
-  line-height: 1.6;
+  line-height: 1.8;
   color: #333;
   overflow-x: hidden;
 }
@@ -227,7 +227,7 @@ html[dir="rtl"] .hero-content {
   font-size: 1.2rem;
   margin-bottom: 2.5rem;
   opacity: 0.9;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 .hero-buttons {
@@ -337,7 +337,7 @@ html[dir="rtl"] .hero-content {
   font-size: 2.5rem;
   font-weight: 700;
   color: #333;
-  margin-bottom: 1rem;
+  margin-bottom: 8px;
 }
 
 .section-subtitle {
@@ -345,14 +345,14 @@ html[dir="rtl"] .hero-content {
   color: #666;
   max-width: 600px;
   margin: 0 auto;
-  line-height: 2.6;
+  line-height: 1.8;
 }
 
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 in first row, 2 in second */
   gap: 30px;
-  padding: 20px;
+  padding: 40px;
   max-width: 1200px; /* control width */
   margin: 0 auto;    /* center the grid */
 }
@@ -448,13 +448,13 @@ html[dir="rtl"] .hero-content {
 
 .service-description {
   color: #666;
-  line-height: 1.6;
+  line-height: 1.8;
   font-size: 0.95rem;
 }
 
 /* Workflow Section */
 .workflow {
-  padding: 6rem 0;
+  padding: 2rem 0;
   background: white;
 }
 
@@ -579,12 +579,12 @@ html[dir="rtl"] .hero-content {
   color: #666;
   max-width: 800px;
   margin: 1rem auto 0;
-  line-height: 2.6;
+  line-height: 1.8;
 }
 
 /* What Sets Apart Section */
 .what-sets-apart {
-  padding: 4rem 0;
+  padding: 2rem 0;
   background: white;
 }
 
@@ -644,7 +644,7 @@ html[dir="rtl"] .hero-content {
 .footer-description {
   color: #ccc;
   margin-bottom: 1.5rem;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 .footer-contact p {
   color: #ccc;
@@ -796,5 +796,19 @@ html[dir="rtl"] .hero-content {
   .features-list {
     max-width: 100%;
     padding: 0 15px;
+  }
+}
+
+/* What Sets Apart Section */
+@media (max-width: 768px) {
+  .section-description {
+   text-align: left;
+  }
+}
+
+/* What Sets Apart Section */
+@media (max-width: 768px) {
+  .section-subtitle {
+   text-align: left;
   }
 }
