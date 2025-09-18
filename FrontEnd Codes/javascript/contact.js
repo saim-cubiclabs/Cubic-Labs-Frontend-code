@@ -1,3 +1,19 @@
+// Get form reference
+const contactForm = document.getElementById('contactForm');
+
+// Handle pre-filled message from pricing section
+document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const message = urlParams.get('message');
+    
+    if (message) {
+        const messageTextarea = document.getElementById('message');
+        if (messageTextarea) {
+            messageTextarea.value = decodeURIComponent(message);
+        }
+    }
+});
+
 const inputs = contactForm.querySelectorAll('input, textarea');
 
 inputs.forEach(input => {

@@ -379,3 +379,61 @@ document.querySelectorAll(".nav-link").forEach(link => {
         }
     });
 });
+
+// Pricing Section Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Add click handlers for pricing buttons
+    const pricingButtons = document.querySelectorAll('.pricing-btn');
+    
+    pricingButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Get the pricing card type
+            const card = this.closest('.pricing-card');
+            const isEcommerce = card.classList.contains('pricing-card-light');
+            
+            // Create contact message based on the selected plan
+            let message = '';
+            if (isEcommerce) {
+                message = 'Hello! I am interested in your E-commerce solution starting at 1500 KWD. Could you please provide more details?';
+            } else {
+                message = 'Hello! I am interested in your Custom Web Solution starting at 3000 KWD. Could you please provide more details?';
+            }
+            
+            // Redirect to contact page with the message (you can modify this as needed)
+            const encodedMessage = encodeURIComponent(message);
+            
+            // Option 1: Redirect to contact page
+            window.location.href = `contact.html?message=${encodedMessage}`;
+            
+            // Option 2: Open WhatsApp (uncomment if you prefer this)
+            // const whatsappNumber = '+96541147331'; // Replace with your actual number
+            // const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+            // window.open(whatsappUrl, '_blank');
+        });
+    });
+    
+    // Add animation to pricing cards on scroll
+    const pricingCards = document.querySelectorAll('.pricing-card');
+    
+    const pricingObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+    
+    pricingCards.forEach(card => {
+        // Set initial state
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = 'all 0.6s ease';
+        
+        // Observe for animation
+        pricingObserver.observe(card);
+    });
+});
