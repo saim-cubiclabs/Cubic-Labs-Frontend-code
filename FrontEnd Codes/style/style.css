@@ -949,3 +949,188 @@ html[dir="rtl"] .hero-content {
     gap: 2rem;
   }
 }
+/*
+ ================================
+   Pricing Section
+================================ */
+.pricing-section {
+  padding: 100px 0;
+  background: #f8f9fa;
+}
+
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pricing-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-card-dark {
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+  color: white;
+}
+
+.pricing-card-light {
+  background: white;
+  color: #333;
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.pricing-category {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #4CAF50;
+}
+
+.pricing-card-dark .pricing-category {
+  color: #a5d6a7;
+}
+
+.pricing-amount {
+  margin-bottom: 1.5rem;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.price-period {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.pricing-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 1.5rem 0;
+}
+
+.pricing-exclusions {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.exclusions-title {
+  color: #000;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.pricing-features {
+  margin-bottom: 2.5rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.feature-item i {
+  color: #4CAF50;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.pricing-card-dark .feature-item i {
+  color: #a5d6a7;
+}
+
+.pricing-btn {
+  width: 100%;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-light {
+  background: linear-gradient(45deg, #4CAF50, #45a049);
+  color: white;
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.btn-light:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+}
+
+.btn-dark {
+  background: linear-gradient(45deg, #66bb6a, #4caf50);
+  color: white;
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.btn-dark:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+}
+
+/* Responsive Design for Pricing */
+@media (max-width: 768px) {
+  .pricing-cards {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .pricing-card {
+    padding: 2rem;
+  }
+  
+  .price {
+    font-size: 2rem;
+  }
+  
+  .pricing-category {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing-section {
+    padding: 60px 0;
+  }
+  
+  .pricing-card {
+    padding: 1.5rem;
+  }
+  
+  .feature-item {
+    font-size: 0.85rem;
+  }
+}
