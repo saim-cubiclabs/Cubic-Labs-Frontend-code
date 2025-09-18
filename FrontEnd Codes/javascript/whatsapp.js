@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
          alt="WhatsApp" 
          style="width:24px; height:24px; margin-right:8px; vertical-align:middle;">
-    WhatsApp
+    <span class="wa-text">WhatsApp</span>
   `;
   btn.style.cssText = `
     display:flex;
@@ -25,4 +25,25 @@ document.addEventListener("DOMContentLoaded", () => {
     z-index:1000;
   `;
   document.body.appendChild(btn);
+
+  // Add responsive CSS
+  const style = document.createElement("style");
+  style.textContent = `
+    @media (max-width: 768px) {
+      .wa-text {
+        display: none;
+      }
+      a[href*="wa.me"] {
+        padding: 12px; /* tighter padding */
+        border-radius: 50%; /* circular look */
+        width: 48px;
+        height: 48px;
+        justify-content: center;
+      }
+      a[href*="wa.me"] img {
+        margin-right: 0 !important; /* center the icon */
+      }
+    }
+  `;
+  document.head.appendChild(style);
 });

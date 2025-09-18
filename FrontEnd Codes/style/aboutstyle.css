@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Oxanium', sans-serif;
-  line-height: 1.6;
+  line-height: 1.8;
   color: #333;
   overflow-x: hidden;
 }
@@ -18,7 +18,7 @@ body {
 }
 
 h1 {
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 /* RTL Support */
@@ -245,14 +245,14 @@ html[dir="rtl"] .hero-content {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 .hero-description {
   font-size: 1.2rem;
   margin-bottom: 2.5rem;
   opacity: 0.9;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 .hero-buttons {
@@ -322,7 +322,7 @@ html[dir="rtl"] .hero-content {
 }
 
 .title-section {
-  padding: 20px 0;
+  padding: 60px 0;
   text-align: center;
   background: #f8f9fa;
 }
@@ -331,22 +331,22 @@ html[dir="rtl"] .hero-content {
   font-size: 36px;
   font-weight: bold;
   color: #333;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   line-height: 1.2;
 }
 
 .title-section p {
   font-size: 16px;
   color: #666;
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 1900px;
+  margin: 0 10px;
   line-height: 2.2;
-  text-align: center;
+  text-align: left;
 }
 
 /* How We Work Section */
 .how-we-work {
-  padding: 80px 0;
+  padding: 50px 0;
   background: white;
 }
 
@@ -361,7 +361,7 @@ html[dir="rtl"] .hero-content {
   font-size: 36px;
   font-weight: bold;
   color: #333;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .text-content p {
@@ -397,13 +397,13 @@ html[dir="rtl"] .hero-content {
 
 /* Our Essence Section */
 .our-essence {
-  padding: 80px 0;
+  padding: 40px 0;
   background: #f8f9fa;
 }
 
 .section-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 .badge {
@@ -421,7 +421,7 @@ html[dir="rtl"] .hero-content {
   font-size: 36px;
   font-weight: bold;
   color: #333;
-  max-width: 600px;
+  max-width: 900px;
   margin: 0 auto;
   line-height: 1.3;
 }
@@ -488,7 +488,7 @@ html[dir="rtl"] .hero-content {
 
 /* From The Heart Section */
 .from-the-heart {
-  padding: 80px 0;
+  padding: 40px 0;
   background: white;
 }
 
@@ -497,7 +497,7 @@ html[dir="rtl"] .hero-content {
   font-weight: bold;
   color: #333;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 .heart-content {
@@ -534,15 +534,13 @@ html[dir="rtl"] .hero-content {
 }
 
 /* What Makes Different Section */
-/* SECTION WRAPPER */
 .what-makes-different {
-  padding: 64px 0;
+  padding: 30px 0;
   background: #f8f9fa;
 }
 
 .what-makes-different .container {
   max-width: 1100px;
-  /* center the whole block */
   margin: 0 auto;
   padding-inline: 24px;
 }
@@ -583,7 +581,7 @@ html[dir="rtl"] .hero-content {
 
 .different-content p {
   color: #444;
-  line-height: 1.6;
+  line-height: 1.8;
   margin: 0 0 16px;
 }
 
@@ -622,7 +620,7 @@ html[dir="rtl"] .hero-content {
 @media (max-width: 992px) {
   .different-content {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     gap: 24px;
   }
 
@@ -710,7 +708,7 @@ html[dir="rtl"] .hero-content {
 .footer-description {
   color: #ccc;
   margin-bottom: 1.5rem;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 .footer-contact p {
@@ -779,15 +777,14 @@ html[dir="rtl"] .hero-content {
   font-size: 0.9rem;
 }
 
-
 /* ================================
-   Mobile Responsiveness
+   Mobile Responsiveness (Improved)
 ================================ */
 
 /* Hamburger visibility */
 @media (max-width: 768px) {
   .hamburger {
-    display: flex; /* Make hamburger visible */
+    display: flex;
   }
 
   .nav-menu {
@@ -814,14 +811,19 @@ html[dir="rtl"] .hero-content {
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2rem;
+    line-height: 2;
+    text-align: left;
   }
 
   .hero-description {
     font-size: 1rem;
+    line-height: 2;
+    text-align: left;
   }
 
   .hero-buttons {
     flex-direction: column;
+    align-items: flex-start;
   }
 }
 
@@ -831,9 +833,9 @@ html[dir="rtl"] .hero-content {
   .heart-content,
   .different-content,
   .essence-cards {
-    grid-template-columns: 1fr !important;
-    text-align: center;
-    gap: 30px !important;
+    grid-template-columns: 1fr;
+    text-align: left;
+    gap: 30px;
   }
 
   .image-content img,
@@ -849,6 +851,8 @@ html[dir="rtl"] .hero-content {
   .different-content .text-content,
   .heart-content .text-content {
     max-width: 100%;
+    text-align: left;
+    line-height: 2;
   }
 
   .section-header h2,
@@ -856,20 +860,23 @@ html[dir="rtl"] .hero-content {
   .what-makes-different h2,
   .title-section h1 {
     font-size: clamp(24px, 5vw, 32px);
+    text-align: left;
   }
 
   .text-content h2,
   .card h3,
   .different-content h3 {
     font-size: clamp(20px, 4vw, 28px);
+    text-align: center;
   }
 
   .text-content p,
   .card p,
   .different-content p,
   .heart-content .text-content p {
-    font-size: 14px;
-    line-height: 1.6;
+    font-size: 16px;
+    line-height: 2;
+    text-align: left;
   }
 }
 
@@ -877,10 +884,14 @@ html[dir="rtl"] .hero-content {
 @media (max-width: 576px) {
   .hero-title {
     font-size: 1.8rem;
+    line-height: 2;
+    text-align: left;
   }
 
   .hero-description {
     font-size: 0.95rem;
+    line-height: 2;
+    text-align: left;
   }
 
   .cta-button,
@@ -889,21 +900,23 @@ html[dir="rtl"] .hero-content {
     text-align: center;
   }
 
-  .essence-cards {
-    grid-template-columns: 1fr !important;
-  }
-
+  .essence-cards,
   .heart-content {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
   }
 
   .what-makes-different .different-content {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
   }
 
   .image-content img {
     width: 100%;
     height: auto;
+  }
+
+  .text-content p {
+    line-height: 2;
+    text-align: left;
   }
 }
