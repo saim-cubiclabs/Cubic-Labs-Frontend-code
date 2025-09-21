@@ -39,7 +39,7 @@ html[dir="rtl"] .hero-content {
    Header & Navbar
 ================================ */
 .header {
-  /* position: fixed; */
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -959,7 +959,7 @@ html[dir="rtl"] .hero-content {
 }
 
 .pricing-container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 40px 20px;
 }
@@ -969,7 +969,7 @@ html[dir="rtl"] .hero-content {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* lowered from 400px */
   gap: 3rem;
   margin-top: 5rem;
-  max-width: 900px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
