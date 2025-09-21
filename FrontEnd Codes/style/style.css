@@ -686,6 +686,7 @@ html[dir="rtl"] .hero-content {
 .cta-title {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+ width: 800px;
 }
 
 .cta-description {
@@ -954,15 +955,26 @@ html[dir="rtl"] .hero-content {
    Pricing Section
 ================================ */
 .pricing-section {
-  padding: 100px 0;
-  background: #f8f9fa;
+ background: #f8f9fa;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Pricing-container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
 .pricing-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 3rem;
-  margin-top: 3rem;
+  margin-top: 5rem;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
