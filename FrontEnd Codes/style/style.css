@@ -1090,8 +1090,16 @@ html[dir="rtl"] .hero-content {
   flex-shrink: 0;
 }
 
+.feature-item i.fa-times {
+  color: #ff0000;
+}
+
 .pricing-card-dark .feature-item i {
   color: #a5d6a7;
+}
+
+.pricing-card-dark .feature-item i.fa-times {
+  color: #ff0000;
 }
 
 .pricing-btn {
@@ -1163,3 +1171,9 @@ html[dir="rtl"] .hero-content {
     font-size: 0.85rem;
   }
 }
+
+.text_q{
+  text-align: justify;
+  color:rgb(255, 0, 0);
+}
+
