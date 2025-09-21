@@ -437,8 +437,9 @@ document.addEventListener('DOMContentLoaded', function() {
         pricingObserver.observe(card);
     });
 });
-// Sm
-ooth scrolling for anchor links
+
+// Smooth scrolling for anchor links
+
 document.addEventListener('DOMContentLoaded', function() {
     // Add smooth scrolling to all anchor links
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
