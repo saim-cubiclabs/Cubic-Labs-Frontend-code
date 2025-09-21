@@ -956,12 +956,6 @@ html[dir="rtl"] .hero-content {
 ================================ */
 .pricing-section {
  background: #f8f9fa;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .Pricing-container{
