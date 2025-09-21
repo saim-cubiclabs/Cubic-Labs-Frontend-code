@@ -14,7 +14,7 @@
 </head>
 
 <body>
- <!-- Header -->
+  <!-- Header -->
   <header class="header">
     <nav class="navbar">
       <div class="nav-container">
@@ -39,6 +39,9 @@
             <a href="index.html" class="nav-link" data-en="HOME" data-ar="الرئيسية">HOME</a>
           </li>
           <li class="nav-item">
+            <a href="index.html#pricing-section" class="nav-link" data-en="PRICING" data-ar="الأسعار">PRICING</a>
+          </li>
+          <li class="nav-item">
             <a href="about.html" class="nav-link" data-en="ABOUT" data-ar="من نحن">ABOUT</a>
           </li>
           <li class="nav-item">
@@ -50,7 +53,7 @@
           <li class="nav-item">
             <a href="careers.html" class="nav-link" data-en="CAREERS" data-ar="الوظائف">CAREERS</a>
           </li>
-           <li class="nav-item">
+          <li class="nav-item">
             <a href="insight.html" class="nav-link" data-en="INSIGHTS" data-ar="الوظائف">INSIGHTS</a>
           </li>
         </ul>
@@ -65,224 +68,238 @@
   </header>
 
 
- <!-- Hero Section -->
-<section id="home" class="hero">
-  <div class="container">
-    <div class="hero-content">
-      <h1 class="text1" data-en="How can we help you today?" data-ar="كيف يمكننا مساعدتك اليوم؟">How can we help you today?</h1>
-      <p data-en="Get instant support for web development, app development, digital branding, and e-commerce solutions"
-         data-ar="احصل على دعم فوري لتطوير المواقع والتطبيقات، العلامة التجارية الرقمية، وحلول التجارة الإلكترونية">
-        Get instant support for web development, app development, digital branding, and e-commerce solutions
-      </p>
-      <div class="search-box">
-        <input type="text" placeholder="Search for help articles..." id="searchInput"
-               data-en="Search for help articles..." data-ar="ابحث عن مقالات المساعدة...">
-        <button onclick="searchKnowledgeBase()">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <path d="m21 21-4.35-4.35"></path>
-          </svg>
-        </button>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="text1" data-en="How can we help you today?" data-ar="كيف يمكننا مساعدتك اليوم؟">How can we help you
+          today?</h1>
+        <p data-en="Get instant support for web development, app development, digital branding, and e-commerce solutions"
+          data-ar="احصل على دعم فوري لتطوير المواقع والتطبيقات، العلامة التجارية الرقمية، وحلول التجارة الإلكترونية">
+          Get instant support for web development, app development, digital branding, and e-commerce solutions
+        </p>
+        <div class="search-box">
+          <input type="text" placeholder="Search for help articles..." id="searchInput"
+            data-en="Search for help articles..." data-ar="ابحث عن مقالات المساعدة...">
+          <button onclick="searchKnowledgeBase()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Actions -->
+  <section class="quick-actions">
+    <div class="container">
+      <div class="actions-grid">
+        <div class="action-card" onclick="openChat()">
+          <i class="fas fa-comment action-icon"></i>
+          <h3 data-en="Live Chat" data-ar="الدردشة المباشرة">Live Chat</h3>
+          <p data-en="Chat with our support team" data-ar="تحدث مع فريق الدعم لدينا">Chat with our support team</p>
+        </div>
+        <div class="action-card" onclick="scrollToSection('contact')">
+          <i class="fas fa-ticket-alt action-icon"></i>
+          <h3 data-en="Submit Ticket" data-ar="إرسال تذكرة">Submit Ticket</h3>
+          <p data-en="Create a support ticket" data-ar="إنشاء تذكرة دعم">Create a support ticket</p>
+        </div>
+        <div class="action-card" onclick="callSupport()">
+          <i class="fas fa-phone action-icon"></i>
+          <h3 data-en="Call Us" data-ar="اتصل بنا">Call Us</h3>
+          <p data-en="+ 965 41147331" data-ar="+965 41147331">+ 965 41147331</p>
+        </div>
+        <div class="action-card" onclick="scrollToSection('faq')">
+          <i class="fas fa-question action-icon"></i>
+          <h3 data-en="FAQ" data-ar="الأسئلة الشائعة">FAQ</h3>
+          <p data-en="Find quick answers" data-ar="اعثر على إجابات سريعة">Find quick answers</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="faq-section">
+    <div class="container">
+      <h2 data-en="Frequently Asked Questions" data-ar="الأسئلة المتكررة">Frequently Asked Questions</h2>
+      <div class="faq-container">
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <h3 data-en="What are your support hours?" data-ar="ما هي ساعات الدعم الخاصة بكم؟">What are your support
+              hours?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p data-en="Our support team is available Sunday to Thursday from 8:00 AM to 4:00 PM. We also provide emergency support for critical issues 24/7."
+              data-ar="يتوفر فريق الدعم لدينا من الأحد إلى الخميس من الساعة 8:00 صباحًا حتى 4:00 مساءً. كما نقدم دعمًا طارئًا للحالات الحرجة على مدار الساعة.">
+              Our support team is available Sunday to Thursday from 8:00 AM to 4:00 PM. We also provide emergency
+              support for critical issues 24/7.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <h3 data-en="How long does it take to get a response?" data-ar="كم من الوقت يستغرق الحصول على رد؟">How long
+              does it take to get a response?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p data-en="We typically respond to support tickets within 4 hours during business hours. Priority support customers receive responses within 1 hour."
+              data-ar="عادةً ما نرد على تذاكر الدعم خلال 4 ساعات أثناء ساعات العمل. يحصل عملاء الدعم المميز على ردود خلال ساعة واحدة.">
+              We typically respond to support tickets within 4 hours during business hours. Priority support customers
+              receive responses within 1 hour.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <h3 data-en="Do you offer training for your solutions?" data-ar="هل تقدمون تدريبًا على حلولكم؟">Do you offer
+              training for your solutions?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p data-en="Yes! We provide comprehensive training sessions for all our services. This includes video tutorials, documentation, and one-on-one training sessions."
+              data-ar="نعم! نحن نقدم جلسات تدريب شاملة لجميع خدماتنا، بما في ذلك الفيديوهات التعليمية، الوثائق، وجلسات تدريب فردية.">
+              Yes! We provide comprehensive training sessions for all our services. This includes video tutorials,
+              documentation, and one-on-one training sessions.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <h3 data-en="What's included in your maintenance packages?"
+              data-ar="ما الذي تتضمنه باقات الصيانة الخاصة بكم؟">What's included in your maintenance packages?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p data-en="Our maintenance packages include regular updates, security monitoring, backup services, performance optimization, and priority support access."
+              data-ar="تتضمن باقات الصيانة لدينا التحديثات المنتظمة، مراقبة الأمان، خدمات النسخ الاحتياطي، تحسين الأداء، والوصول إلى دعم مميز.">
+              Our maintenance packages include regular updates, security monitoring, backup services, performance
+              optimization, and priority support access.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <h3 data-en="Can you help with third-party integrations?"
+              data-ar="هل يمكنكم المساعدة في التكامل مع خدمات خارجية؟">Can you help with third-party integrations?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p data-en="Absolutely! We have experience with a wide range of third-party services and APIs. We can help integrate payment processors, CRMs, marketing tools, and more."
+              data-ar="بالتأكيد! لدينا خبرة مع مجموعة واسعة من الخدمات الخارجية وواجهات البرمجة. يمكننا المساعدة في دمج بوابات الدفع، أنظمة إدارة العملاء، وأدوات التسويق وغير ذلك.">
+              Absolutely! We have experience with a wide range of third-party services and APIs. We can help integrate
+              payment processors, CRMs, marketing tools, and more.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2 data-en="Submit a Support Ticket" data-ar="إرسال تذكرة دعم">Submit a Support Ticket</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3 data-en="Get in Touch" data-ar="تواصل معنا">Get in Touch</h3>
+          <div class="contact-item">
+            <strong data-en="Email:" data-ar="البريد الإلكتروني:">Email:</strong> info@cubiclabs.net
+          </div>
+          <div class="contact-item">
+            <strong data-en="Phone:" data-ar="الهاتف:">Phone:</strong> +965 41147331
+          </div>
+          <div class="contact-item">
+            <strong data-en="Hours:" data-ar="ساعات العمل:">Hours:</strong> Sun-Thu 8AM–4PM
+          </div>
+          <div class="contact-item">
+            <strong data-en="Outage:" data-ar="الطوارئ:">Outage:</strong> 24/7 for critical issues
+          </div>
+        </div>
+        <form class="support-form" onsubmit="submitTicket(event)">
+          <div class="form-group">
+            <label for="name" data-en="Full Name *" data-ar="الاسم الكامل *">Full Name *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email" data-en="Email Address *" data-ar="البريد الإلكتروني *">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="service" data-en="Service Type *" data-ar="نوع الخدمة *">Service Type *</label>
+            <select id="service" name="service" required>
+              <option value="" data-en="Select a service" data-ar="اختر خدمة">Select a service</option>
+              <option value="web-development">Web Development</option>
+              <option value="app-development">App Development</option>
+              <option value="digital-branding">Digital Branding</option>
+              <option value="e-commerce">E-commerce</option>
+              <option value="general">General Inquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="priority" data-en="Priority Level" data-ar="مستوى الأولوية">Priority Level</label>
+            <select id="priority" name="priority">
+              <option value="low">Low</option>
+              <option value="medium" selected>Medium</option>
+              <option value="high">High</option>
+              <option value="urgent">Urgent</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="subject" data-en="Subject *" data-ar="الموضوع *">Subject *</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+          <div class="form-group">
+            <label for="message" data-en="Message *" data-ar="الرسالة *">Message *</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn" data-en="Submit Ticket" data-ar="إرسال التذكرة">Submit
+            Ticket</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chat Widget -->
+  <div id="chatWidget" class="chat-widget">
+    <div class="chat-header">
+      <h4 data-en="Live Support" data-ar="الدعم المباشر">Live Support</h4>
+      <button onclick="closeChat()">&times;</button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="message bot-message">
+        <p data-en="Hello! How can I help you today?" data-ar="مرحبًا! كيف يمكنني مساعدتك اليوم؟">Hello! How can I help
+          you today?</p>
+      </div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="chatInput" data-en="Type your message..." data-ar="اكتب رسالتك..."
+        placeholder="Type your message..." onkeypress="handleChatKeypress(event)">
+      <button onclick="sendMessage()" data-en="Send" data-ar="إرسال">Send</button>
+    </div>
+  </div>
+
+  <!-- Article Modal -->
+  <div id="articleModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="articleTitle" data-en="Article Title" data-ar="عنوان المقال">Article Title</h3>
+        <button class="close-btn" onclick="closeModal()">&times;</button>
+      </div>
+      <div class="modal-body" id="articleContent">
+        <!-- Article content will be loaded here -->
       </div>
     </div>
   </div>
-</section>
-
-<!-- Quick Actions -->
-<section class="quick-actions">
-  <div class="container">
-    <div class="actions-grid">
-      <div class="action-card" onclick="openChat()">
-        <i class="fas fa-comment action-icon"></i>
-        <h3 data-en="Live Chat" data-ar="الدردشة المباشرة">Live Chat</h3>
-        <p data-en="Chat with our support team" data-ar="تحدث مع فريق الدعم لدينا">Chat with our support team</p>
-      </div>
-      <div class="action-card" onclick="scrollToSection('contact')">
-       <i class="fas fa-ticket-alt action-icon"></i>
-        <h3 data-en="Submit Ticket" data-ar="إرسال تذكرة">Submit Ticket</h3>
-        <p data-en="Create a support ticket" data-ar="إنشاء تذكرة دعم">Create a support ticket</p>
-      </div>
-      <div class="action-card" onclick="callSupport()">
-        <i class="fas fa-phone action-icon"></i>
-        <h3 data-en="Call Us" data-ar="اتصل بنا">Call Us</h3>
-        <p data-en="+ 965 41147331" data-ar="+965 41147331">+ 965 41147331</p>
-      </div>
-      <div class="action-card" onclick="scrollToSection('faq')">
-        <i class="fas fa-question action-icon"></i>
-        <h3 data-en="FAQ" data-ar="الأسئلة الشائعة">FAQ</h3>
-        <p data-en="Find quick answers" data-ar="اعثر على إجابات سريعة">Find quick answers</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ Section -->
-<section id="faq" class="faq-section">
-  <div class="container">
-    <h2 data-en="Frequently Asked Questions" data-ar="الأسئلة المتكررة">Frequently Asked Questions</h2>
-    <div class="faq-container">
-
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          <h3 data-en="What are your support hours?" data-ar="ما هي ساعات الدعم الخاصة بكم؟">What are your support hours?</h3>
-          <span class="faq-toggle">+</span>
-        </div>
-        <div class="faq-answer">
-          <p data-en="Our support team is available Sunday to Thursday from 8:00 AM to 4:00 PM. We also provide emergency support for critical issues 24/7."
-             data-ar="يتوفر فريق الدعم لدينا من الأحد إلى الخميس من الساعة 8:00 صباحًا حتى 4:00 مساءً. كما نقدم دعمًا طارئًا للحالات الحرجة على مدار الساعة.">
-            Our support team is available Sunday to Thursday from 8:00 AM to 4:00 PM. We also provide emergency support for critical issues 24/7.
-          </p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          <h3 data-en="How long does it take to get a response?" data-ar="كم من الوقت يستغرق الحصول على رد؟">How long does it take to get a response?</h3>
-          <span class="faq-toggle">+</span>
-        </div>
-        <div class="faq-answer">
-          <p data-en="We typically respond to support tickets within 4 hours during business hours. Priority support customers receive responses within 1 hour."
-             data-ar="عادةً ما نرد على تذاكر الدعم خلال 4 ساعات أثناء ساعات العمل. يحصل عملاء الدعم المميز على ردود خلال ساعة واحدة.">
-            We typically respond to support tickets within 4 hours during business hours. Priority support customers receive responses within 1 hour.
-          </p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          <h3 data-en="Do you offer training for your solutions?" data-ar="هل تقدمون تدريبًا على حلولكم؟">Do you offer training for your solutions?</h3>
-          <span class="faq-toggle">+</span>
-        </div>
-        <div class="faq-answer">
-          <p data-en="Yes! We provide comprehensive training sessions for all our services. This includes video tutorials, documentation, and one-on-one training sessions."
-             data-ar="نعم! نحن نقدم جلسات تدريب شاملة لجميع خدماتنا، بما في ذلك الفيديوهات التعليمية، الوثائق، وجلسات تدريب فردية.">
-            Yes! We provide comprehensive training sessions for all our services. This includes video tutorials, documentation, and one-on-one training sessions.
-          </p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          <h3 data-en="What's included in your maintenance packages?" data-ar="ما الذي تتضمنه باقات الصيانة الخاصة بكم؟">What's included in your maintenance packages?</h3>
-          <span class="faq-toggle">+</span>
-        </div>
-        <div class="faq-answer">
-          <p data-en="Our maintenance packages include regular updates, security monitoring, backup services, performance optimization, and priority support access."
-             data-ar="تتضمن باقات الصيانة لدينا التحديثات المنتظمة، مراقبة الأمان، خدمات النسخ الاحتياطي، تحسين الأداء، والوصول إلى دعم مميز.">
-            Our maintenance packages include regular updates, security monitoring, backup services, performance optimization, and priority support access.
-          </p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          <h3 data-en="Can you help with third-party integrations?" data-ar="هل يمكنكم المساعدة في التكامل مع خدمات خارجية؟">Can you help with third-party integrations?</h3>
-          <span class="faq-toggle">+</span>
-        </div>
-        <div class="faq-answer">
-          <p data-en="Absolutely! We have experience with a wide range of third-party services and APIs. We can help integrate payment processors, CRMs, marketing tools, and more."
-             data-ar="بالتأكيد! لدينا خبرة مع مجموعة واسعة من الخدمات الخارجية وواجهات البرمجة. يمكننا المساعدة في دمج بوابات الدفع، أنظمة إدارة العملاء، وأدوات التسويق وغير ذلك.">
-            Absolutely! We have experience with a wide range of third-party services and APIs. We can help integrate payment processors, CRMs, marketing tools, and more.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Contact Form -->
-<section id="contact" class="contact-section">
-  <div class="container">
-    <h2 data-en="Submit a Support Ticket" data-ar="إرسال تذكرة دعم">Submit a Support Ticket</h2>
-    <div class="contact-grid">
-      <div class="contact-info">
-        <h3 data-en="Get in Touch" data-ar="تواصل معنا">Get in Touch</h3>
-        <div class="contact-item">
-          <strong data-en="Email:" data-ar="البريد الإلكتروني:">Email:</strong> info@cubiclabs.net
-        </div>
-        <div class="contact-item">
-          <strong data-en="Phone:" data-ar="الهاتف:">Phone:</strong> +965 41147331
-        </div>
-        <div class="contact-item">
-          <strong data-en="Hours:" data-ar="ساعات العمل:">Hours:</strong> Sun-Thu 8AM–4PM
-        </div>
-        <div class="contact-item">
-          <strong data-en="Outage:" data-ar="الطوارئ:">Outage:</strong> 24/7 for critical issues
-        </div>
-      </div>
-      <form class="support-form" onsubmit="submitTicket(event)">
-        <div class="form-group">
-          <label for="name" data-en="Full Name *" data-ar="الاسم الكامل *">Full Name *</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-          <label for="email" data-en="Email Address *" data-ar="البريد الإلكتروني *">Email Address *</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <label for="service" data-en="Service Type *" data-ar="نوع الخدمة *">Service Type *</label>
-          <select id="service" name="service" required>
-            <option value="" data-en="Select a service" data-ar="اختر خدمة">Select a service</option>
-            <option value="web-development">Web Development</option>
-            <option value="app-development">App Development</option>
-            <option value="digital-branding">Digital Branding</option>
-            <option value="e-commerce">E-commerce</option>
-            <option value="general">General Inquiry</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="priority" data-en="Priority Level" data-ar="مستوى الأولوية">Priority Level</label>
-          <select id="priority" name="priority">
-            <option value="low">Low</option>
-            <option value="medium" selected>Medium</option>
-            <option value="high">High</option>
-            <option value="urgent">Urgent</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="subject" data-en="Subject *" data-ar="الموضوع *">Subject *</label>
-          <input type="text" id="subject" name="subject" required>
-        </div>
-        <div class="form-group">
-          <label for="message" data-en="Message *" data-ar="الرسالة *">Message *</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-        <button type="submit" class="submit-btn" data-en="Submit Ticket" data-ar="إرسال التذكرة">Submit Ticket</button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- Chat Widget -->
-<div id="chatWidget" class="chat-widget">
-  <div class="chat-header">
-    <h4 data-en="Live Support" data-ar="الدعم المباشر">Live Support</h4>
-    <button onclick="closeChat()">&times;</button>
-  </div>
-  <div class="chat-messages" id="chatMessages">
-    <div class="message bot-message">
-      <p data-en="Hello! How can I help you today?" data-ar="مرحبًا! كيف يمكنني مساعدتك اليوم؟">Hello! How can I help you today?</p>
-    </div>
-  </div>
-  <div class="chat-input">
-    <input type="text" id="chatInput" data-en="Type your message..." data-ar="اكتب رسالتك..." placeholder="Type your message..." onkeypress="handleChatKeypress(event)">
-    <button onclick="sendMessage()" data-en="Send" data-ar="إرسال">Send</button>
-  </div>
-</div>
-
-<!-- Article Modal -->
-<div id="articleModal" class="modal">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h3 id="articleTitle" data-en="Article Title" data-ar="عنوان المقال">Article Title</h3>
-      <button class="close-btn" onclick="closeModal()">&times;</button>
-    </div>
-    <div class="modal-body" id="articleContent">
-      <!-- Article content will be loaded here -->
-    </div>
-  </div>
-</div>
 
   <!-- Footer -->
   <footer class="footer" id="contact">
