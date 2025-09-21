@@ -9,7 +9,6 @@ body {
   line-height: 1.8;
   color: #333;
   overflow-x: hidden;
-  padding-top: 70px;
 }
 
 .container {
@@ -40,7 +39,7 @@ html[dir="rtl"] .hero-content {
    Header & Navbar
 ================================ */
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -56,7 +55,6 @@ html[dir="rtl"] .hero-content {
 }
 
 .nav-container {
-  position: absolute;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -688,7 +686,7 @@ html[dir="rtl"] .hero-content {
 .cta-title {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  max-width: 100%;
+ width: 800px;
 }
 
 .cta-description {
@@ -946,18 +944,12 @@ html[dir="rtl"] .hero-content {
 
   .cta-title {
     font-size: 2rem;
-    max-width: 100%;
-  }
-
-  .about-img {
-    height: auto;
   }
 
   .footer-content {
     gap: 2rem;
   }
 }
-
 /*
  ================================
    Pricing Section
@@ -966,7 +958,7 @@ html[dir="rtl"] .hero-content {
   background: #f8f9fa;
 }
 
-.Pricing-container {
+.pricing-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
@@ -974,7 +966,7 @@ html[dir="rtl"] .hero-content {
 
 .pricing-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* lowered from 400px */
   gap: 3rem;
   margin-top: 5rem;
   max-width: 900px;
@@ -1115,36 +1107,55 @@ html[dir="rtl"] .hero-content {
 }
 
 /* Responsive Design for Pricing */
+
+/* Large tablets and small desktops (992px) */
+@media (max-width: 992px) {
+  .pricing-cards {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+  }
+
+  .price {
+    font-size: 2.2rem;
+  }
+}
+
+/* Tablets (768px) */
 @media (max-width: 768px) {
   .pricing-cards {
     grid-template-columns: 1fr;
     gap: 2rem;
     margin-top: 2rem;
   }
-
+  
   .pricing-card {
     padding: 2rem;
   }
-
+  
   .price {
     font-size: 2rem;
   }
-
+  
   .pricing-category {
     font-size: 1.1rem;
   }
 }
 
-@media (max-width: 480px) {
+/* Mobile phones (576px) */
+@media (max-width: 576px) {
   .pricing-section {
-    padding: 60px 0;
+    padding: 50px 0;
   }
-
+  
   .pricing-card {
     padding: 1.5rem;
   }
-
+  
   .feature-item {
     font-size: 0.85rem;
+  }
+
+  .price {
+    font-size: 1.8rem;
   }
 }
