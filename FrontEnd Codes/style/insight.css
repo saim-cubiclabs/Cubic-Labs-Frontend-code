@@ -96,8 +96,9 @@ html[dir="rtl"] .hero-content {
   margin-left: 10px;
 }
 
+
 #lang-btn {
-  background: #f44336;
+  background: #46a24a;
   color: #fff;
   border: none;
   padding: 8px 16px;
@@ -107,8 +108,9 @@ html[dir="rtl"] .hero-content {
 }
 
 #lang-btn:hover {
-  background: #46a24a;
+  background: #f44336;
 }
+
 
 /* Nav Links */
 .nav-menu {

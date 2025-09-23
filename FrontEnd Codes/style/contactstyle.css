@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -27,9 +26,11 @@ html[dir="rtl"] .nav-menu {
   direction: rtl;
   text-align: right;
 }
+
 html[dir="rtl"] .nav-menu li {
   float: right;
 }
+
 html[dir="rtl"] .hero-content {
   text-align: right;
 }
@@ -39,14 +40,19 @@ html[dir="rtl"] .hero-content {
 ================================ */
 .header {
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
-  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   transition: all 0.3s ease;
 }
-.navbar { padding: 1rem 0; }
+
+.navbar {
+  padding: 1rem 0;
+}
 
 .nav-container {
   max-width: 1200px;
@@ -64,23 +70,34 @@ html[dir="rtl"] .hero-content {
   gap: 8px;
   padding: 4px 8px;
 }
+
 .logo-icon img {
   width: 40px;
   height: auto;
   display: block;
 }
+
 .logo-text {
   font-size: 1.5rem;
   font-weight: bold;
   color: #333;
 }
-.logo-text .cubic { font-weight: 600; }
-.logo-text .labs { font-weight: 400; }
+
+.logo-text .cubic {
+  font-weight: 600;
+}
+
+.logo-text .labs {
+  font-weight: 400;
+}
 
 /* Language Switcher */
-.language-switcher { margin-left: 10px; }
+.language-switcher {
+  margin-left: 10px;
+}
+
 #lang-btn {
-  background: #f44336;
+  background: #46a24a;
   color: #fff;
   border: none;
   padding: 8px 16px;
@@ -88,7 +105,11 @@ html[dir="rtl"] .hero-content {
   cursor: pointer;
   transition: 0.3s;
 }
-#lang-btn:hover { background: #46a24a; }
+
+#lang-btn:hover {
+  background: #f44336;
+}
+
 
 /* Nav Links */
 .nav-menu {
@@ -96,6 +117,7 @@ html[dir="rtl"] .hero-content {
   list-style: none;
   gap: 2rem;
 }
+
 .nav-link {
   text-decoration: none;
   color: #333;
@@ -105,24 +127,32 @@ html[dir="rtl"] .hero-content {
   transition: 0.3s;
   padding: 0.5rem 0;
 }
+
 .nav-link:hover {
   color: #4CAF50;
   transform: translateY(-2px);
 }
+
 .nav-link::after {
   content: '';
   position: absolute;
-  bottom: 0; left: 0;
-  width: 0; height: 2px;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
   background: #4CAF50;
   transition: width 0.3s;
 }
-.nav-link:hover::after { width: 100%; }
+
+.nav-link:hover::after {
+  width: 100%;
+}
 
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 0.5rem; /* reduced from 1rem */
+  gap: 0.5rem;
+  /* reduced from 1rem */
 }
 
 /* Hamburger */
@@ -147,7 +177,11 @@ html[dir="rtl"] .hero-content {
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
-.hamburger.active span:nth-child(2) { opacity: 0; }
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(7px, -6px);
 }
@@ -209,8 +243,8 @@ html[dir="rtl"] .hero-content {
 }
 
 .hero-title {
-  font-size: 3.5rem;
-  font-weight: bold;
+  font-size: 3rem;
+  font-weight: 600;
   margin-bottom: 1.5rem;
   line-height: 1.2;
 }
@@ -294,7 +328,7 @@ html[dir="rtl"] .hero-content {
 }
 
 .contact-intro p {
-  font-size: 18px;
+  font-size: 20px;
   color: #666;
   max-width: 600px;
   margin: 0 auto;
@@ -310,7 +344,7 @@ html[dir="rtl"] .hero-content {
 /* Contact Form */
 .contact-form-container {
   background: white;
-  padding: 70px;
+  padding: 40px;
   border-radius: 20px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
@@ -319,7 +353,7 @@ html[dir="rtl"] .hero-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .form-group {
@@ -331,7 +365,7 @@ html[dir="rtl"] .hero-content {
   width: 100%;
   padding: 16px 20px;
   border: 2px solid #e2e8f0;
-  border-radius: 12px;
+  border-radius: 6px;
   font-size: 16px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
   background: #fafafa;
@@ -355,7 +389,7 @@ html[dir="rtl"] .hero-content {
   color: white;
   border: none;
   padding: 16px 40px;
-  border-radius: 12px;
+  border-radius: 6px;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
@@ -372,7 +406,7 @@ html[dir="rtl"] .hero-content {
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 70px;
+  gap: 40px;
 }
 
 .contact-item {
@@ -817,18 +851,6 @@ html[dir="rtl"] .hero-content {
   .contact-section:last-of-type h2 {
     font-size: 1.8rem;
   }
-}
-
-
-
-
-
-
-
-
-
-
-
 }
 
 /* Additional Map Section Enhancements - Desktop Optimized */

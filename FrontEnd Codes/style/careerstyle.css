@@ -97,7 +97,7 @@ html[dir="rtl"] .hero-content {
 }
 
 #lang-btn {
-  background: #f44336;
+  background: #46a24a;
   color: #fff;
   border: none;
   padding: 8px 16px;
@@ -107,8 +107,9 @@ html[dir="rtl"] .hero-content {
 }
 
 #lang-btn:hover {
-  background: #46a24a;
+  background: #f44336;
 }
+
 
 /* Nav Links */
 .nav-menu {
@@ -243,8 +244,8 @@ html[dir="rtl"] .hero-content {
 }
 
 .hero-title {
-  font-size: 3.5rem;
-  font-weight: bold;
+  font-size: 3rem;
+  font-weight: 600;
   margin-bottom: 1.5rem;
   line-height: 1.2;
 }
@@ -323,7 +324,7 @@ html[dir="rtl"] .hero-content {
 
 .section-title {
     font-size: 36px;
-    font-weight: 700;
+    font-weight: 600;
     color: #2d3748;
     text-align: center;
     margin-bottom: 30px;
@@ -397,15 +398,15 @@ html[dir="rtl"] .hero-content {
 }
 
 .health-care {
-    background: linear-gradient(135deg, #2196f3, #1976d2);
+    background: linear-gradient(135deg, #4caf50, #45a049);
 }
 
 .great-people {
-    background: linear-gradient(135deg, #ff9800, #f57c00);
+    background: linear-gradient(135deg, #4caf50, #45a049);
 }
 
 .social-commitment {
-    background: linear-gradient(135deg, #9c27b0, #7b1fa2);
+    background: linear-gradient(135deg, #4caf50, #45a049);
 }
 
 .card-icon i {
@@ -581,7 +582,7 @@ html[dir="rtl"] .hero-content {
     width: 100%;
     padding: 16px 20px;
     border: 2px solid #e2e8f0;
-    border-radius: 12px;
+    border-radius: 6px;
     font-size: 16px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     background: #fafafa;
@@ -639,7 +640,7 @@ html[dir="rtl"] .hero-content {
     color: white;
     border: none;
     padding: 16px 40px;
-    border-radius: 12px;
+    border-radius: 6px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;

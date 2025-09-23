@@ -77,9 +77,12 @@ html[dir="rtl"] .hero-content {
 .logo-text .labs { font-weight: 400; }
 
 /* Language Switcher */
-.language-switcher { margin-left: 10px; }
+.language-switcher { 
+  margin-left: 10px; 
+}
+
 #lang-btn {
-  background: #f44336;
+  background: #46a24a;
   color: #fff;
   border: none;
   padding: 8px 16px;
@@ -87,7 +90,10 @@ html[dir="rtl"] .hero-content {
   cursor: pointer;
   transition: 0.3s;
 }
-#lang-btn:hover { background: #46a24a; }
+
+#lang-btn:hover {
+  background: #f44336;
+}
 
 /* Nav Links */
 .nav-menu {
