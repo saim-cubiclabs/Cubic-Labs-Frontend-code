@@ -20,3 +20,10 @@ For permissions or inquiries regarding usage, please contact:
 **Website:** (https://www.cubiclabs.tech/)
 
 
+<img width="1901" height="939" alt="image" src="https://github.com/user-attachments/assets/e51f2075-3412-441f-90dd-09ef0ff2722d" />
+
+<img width="1900" height="939" alt="image" src="https://github.com/user-attachments/assets/13260f5b-b0a6-4764-87a9-cfb6221fc14e" />
+
+
+
+
